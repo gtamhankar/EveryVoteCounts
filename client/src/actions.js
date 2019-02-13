@@ -21,3 +21,9 @@ export function GetGenericPoll() {
       .then(res => res.json())
       .then(genericpoll => console.log(genericpoll));
 }
+
+export function GetPollTemplate() {
+	fetch('/polltemplates/getpoll?PollID=1')
+      .then(res => res.json())
+      .then(polltemplate => console.log(polltemplate));
+}

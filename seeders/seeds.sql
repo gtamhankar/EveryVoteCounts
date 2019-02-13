@@ -1,3 +1,30 @@
+http://localhost:3001/polltemplates/add?PollName=%27new%20field%27&PollUserName=%27Tim%27&QNumber=1&QDescription=%27do%20you%20feel%20overwhelmed?%27&Option1=%27yes%27&Option2=%27No%27&Option3=%27XX%27&CreatedOn=%272019/01/01%27&Category=%27test%27
+
+
+http://localhost:3001/pollresults/add?PollID=1&PollUserName=%27test%27&OptionVoted=3&VoteDescription=%27xx%27&CreatedOn=%272019/01/01%27
+
+	// for testing
+	//const {PollID,PollUserName,QNumber,Category} = req.query
+	//const TemplateAddQuery = `INSERT INTO polltemplates (PollID,PollUserName,QNumber,QDescription,Option1,Option2,Option3,
+	//CreatedOn,Category) 
+	//values(${PollID},${PollUserName},${QNumber},'How do you feel today ? ','happy','stressed','a',
+	//'2019-01-31 05:00:00','Generic');`
+ 
+// VALUES ('242','polltesting','1','How do you feel today ? ','happy','stressed','a',
+// '2019-01-31 05:00:00','General');`
+ 
+
+
+http://localhost:3001/polltemplates/add?PollID=420&PollUserName=gouri&QNumber=1&QDescription='how to train your dragon'&Option1=yes&Option2=no&Option3=why&CreatedOn=2019/01/01&Category=general
+add?PollID=111&PollUserName=%27Tim%27&QNumber=1&QDescription=%27do%20you%20feel%20overwhelmed%20ggggggggggggg?%27&Option1=%27yes%27&Option2=%27No%27&Option3=%27XX%27&CreatedOn=%272019/01/01%27&Category=%27nonogeneralllll%27
+use everyvotecounts;
+
+ INSERT INTO `polltemplates` (`PollID`,`PollUserName`,`QNumber`,`QDescription`,`Option1`,`Option2`,`Option3`,
+ `CreatedOn`,`Category`) 
+ VALUES ('1','polltesting','1','What cuisine for today lunch ? ','Mexican','Indian','Thai',
+ '2019-01-31 05:00:00','General');
+ 
+ 
 INSERT INTO `everyvotecounts`.`members` ( `PollUserName`,`PollUserPassword`,`PollUserRole`) VALUES ('GT', 'test','admin' );
 
 INSERT INTO `everyvotecounts`.`genericpoll`

@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+const PORT = process.env.PORT || 3001;
 var index = require('./routes/index');
 var users = require('./routes/users');
 var genericpoll = require('./routes/genericpoll');
@@ -23,7 +23,7 @@ app.use(function(req, res, next){
 	res.locals.connection = mysql.createConnection({
 		host     : 'localhost',
 		user     : 'root',
-		password : '',
+		password : 'kiPower2629',
 		database : 'everyvotecounts'
 	});
 	res.locals.connection.connect();
@@ -44,6 +44,11 @@ app.use('/genericpoll',genericpoll);
 app.use('/polltemplates',polltemplates);
 app.use('/pollresults', pollresults);
 
+const server = app.listen(PORT, () => {
+  console.log(`ðŸŒŽ ==> API server now on port ${PORT}!`);
+});
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -63,6 +68,6 @@ app.use(function(err, req, res, next) {
 
 var http = require('http');
 module.exports = app;
-var server = http.createServer(app);
-server.listen(4007);
+//var server = http.createServer(app);
+//server.listen(4007);
 

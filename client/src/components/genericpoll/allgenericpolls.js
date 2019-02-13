@@ -35,8 +35,9 @@ export default class AllGenericPolls extends Component {
             </tr>
           </thead>
           <tbody>
+		  
               {this.state.genericpoll.map(gp =>
-                <tr key={gp.id}>
+                <tr key={gp.ID}>
                   <td>{gp.PollQuestion}</td>
                   <td>{gp.Option1Desc}</td>
                   <td>{gp.Option1Count}</td>

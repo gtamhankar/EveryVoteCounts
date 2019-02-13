@@ -8,6 +8,7 @@ import NotFound from './components/notfound';
 import Users from './components/users';
 import EditUsers from './components/users/edit.js';
 import GenericPoll from './components/genericpoll';
+import CreatePoll from './components/createpoll';
 import { createStore } from 'redux';
 import todoApp from './reducers';
 import { Provider } from 'react-redux'
@@ -26,7 +27,8 @@ const Routes = (props) => (
     <Route path="/users" component={Users} />
     <Route path="/edituser/:id" component={EditUsers} />
 	<Route path="/genericpoll" component={GenericPoll} />
-    <Route path="*" component={NotFound} />
+    <Route path="/createpoll" component={CreatePoll} />
+    <Route path="*" component={NotFound} />	
   </Router>
 </Provider>
 );

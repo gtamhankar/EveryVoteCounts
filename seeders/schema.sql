@@ -12,11 +12,9 @@ CREATE TABLE `members` (
 ) ;
 
 
-
-
 CREATE TABLE PollTemplates (
 	ID int NOT NULL AUTO_INCREMENT,
-    PollID int NOT NULL ,
+    PollID  int NOT NULL,
     PollUserName varchar(24) NOT NULL,
 	QNumber int NOT NULL,
 	QDescription  varchar(500) NOT NULL,
@@ -27,7 +25,6 @@ CREATE TABLE PollTemplates (
     Category varchar(25) NULL,
     PRIMARY KEY (ID)
 );
-
 
 
 CREATE TABLE PollResults (
@@ -52,3 +49,9 @@ CREATE TABLE genericpoll (
 	Option4Count  int  NULL,      
     PRIMARY KEY (ID)
 );
+
+
+select PollID, OptionVoted, Count(optionVoted) , VoteDescription
+from pollresults 
+where pollid = 1
+group by optionvoted
