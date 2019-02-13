@@ -23,7 +23,7 @@ app.use(function(req, res, next){
 	res.locals.connection = mysql.createConnection({
 		host     : 'localhost',
 		user     : 'root',
-		password : 'kiPower2629',
+		password : '',
 		database : 'everyvotecounts'
 	});
 	res.locals.connection.connect();
